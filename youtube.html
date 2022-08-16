@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<title>NarutoTube by Nikhil</title>
+<style>
+ .p{
+font-family: Roboto,Arial;
+margin-top: 0px;
+margin-bottom: 0px;
+ }
+ 
+ .image{
+width :100%;
+height :200px;
+display: block;
+object-fit: fill;
+ }
+
+.first{
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+margin-bottom: 5px;
+margin-top: 0px;
+}
+.second{
+font-size: 15px;
+font-family: "Roboto","Arial",sans-serif;
+color: rgb(96, 96, 96);
+margin-bottom: 1px;
+margin-top: 1px;
+}
+.third{
+    font-size: 15px;
+     font-family: "Roboto","Arial",sans-serif;
+    color: rgb(96, 96, 96);
+    margin-bottom: 1px;
+    margin-top: 1px;  
+}
+.video{
+    width: 400px;
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: top;
+}
+.videos 
+{
+display: grid;
+grid-template-columns:1fr 1fr 1fr;
+margin-bottom: 30px;
+}
+.profile{
+width:45px;
+border-radius: 50px;
+object-fit: fill;}
+.dp{
+display: inline-block;
+width: 50px;
+vertical-align: top;
+}
+.info{
+    display: inline-block;
+
+}
+.tnrow{
+margin-bottom: 10px;
+position: relative;
+}
+.time{
+position: absolute;
+bottom: 2px;
+right:2px;
+background-color: black;
+color: white;
+font-family: Roboto ,Arial;
+font-size: 15px;
+font-weight: 500;
+border-radius: 3px;
+padding-left: 3px;
+padding-right: 3px;
+padding-top: 4px;
+padding-bottom: 4px;
+}
+.Vid-info-grid{
+display: grid;
+grid-template-columns: 50px 1fr;
+
+}
+body{
+    margin:0;
+    padding-top: 60px;
+    padding-left: 96px;
+    padding-right:24px ;
+}
+.header{
+height: 55px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+background-color: white;
+border-bottom-width:1px ;
+border-bottom-style: solid;
+border-bottom-color: rgb(228, 228, 228);
+z-index: 100;
+}
+.left-section{
+    display: flex;
+    align-items: center;
+}
+.right-section{
+    width: 200px;
+    align-items: center;
+}
+.centre-section{
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    height: 25px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.logo
+{
+    height:25px;
+}
+.voice-but{
+height: 40px;
+width: 40px;
+border-radius: 20px;
+border: none;
+}
+.search-but{
+height: 40px;
+width: 66px;
+background-color: rgb(240,240,240);
+border-width: 1px;
+border-style: solid;
+border-color: rgb(192, 192, 192);
+margin-left: -1px;
+margin-right: 10px;
+}
+.search{
+    flex: 1;
+   height: 36px;
+   padding-left: 10px;
+   font-size: 16px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: rgb(192, 192, 192);
+   border-radius: 2px;
+   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05)
+}
+.search::placeholder{
+    font-family: Roboto, Arial;
+    font-size: 16px;
+    padding-left: 12px;
+}
+.search-b{
+margin-top: 4px;
+height:25px;}
+.voice-b{
+width: 30px;
+height:40px;
+}
+.buts
+{   margin-top: 10px;
+    height: 30px;
+    padding-right: 10px;
+}
+.profile-main{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 15px;
+}
+.s{
+height: 120px;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.s:hover{
+    background-color: rgb(226, 221, 221);
+}
+.sicons{
+        width :40px;
+        align-items: center;
+    }
+    .text{
+        height: 15px;
+    }
+    .side{
+       position:fixed;
+       left:0;
+       bottom: 0;
+       top: 55px;
+       background-color: white;
+       width: 110px;
+    }
+    .s div{
+     font-family: Roboto,Arial;
+     font-size: 12px;
+font-weight: solid;
+font-style: bold;
+    }
+    
+</style>
+</head>
+
+<body>
+<div class="header">
+<div class="left-section">
+<img class ="menu" src="images/hamburger-menu.svg">
+<img class="logo" src="images/youtube-logo.svg">
+</div>
+
+<div class="centre-section" >    
+<input class="search" type="text" placeholder="Search">
+<button class="search-but"><img class="search-b"src="images/ser.svg"></button>
+<button class="voice-but"><img class="voice-b"src="images/voice-search-icon.svg"></button>
+</div>
+
+<div class="right-section">
+
+<img class="buts" src="images/but1.svg">
+<img class="buts" src="images/but2.svg">
+<img class="buts" src="images/but3.svg">
+<img class="profile-main" src="images/profile.jpg">
+
+</div>
+</div>
+<div class="side">
+    <div class="s" >
+        <div><img class ="sicons" src="images/s1.svg"></div>
+        <div class="text">Home</div>
+    </div>
+    <div class="s" >
+        <div><img class ="sicons"src="images/s2.svg"></div>
+        <div class="text">Explore</div>
+    </div>
+    <div class="s" >
+        <div><img class ="sicons"src="images/s3.svg"></div>
+        <div class="text">Subscriptions</div>
+    </div>
+    <div class="s" >
+        <div><img class ="sicons"src="images/s4.svg"></div>
+        <div class="text">Originals</div>
+    </div>
+    <div class="s" >
+        <div><img class ="sicons"src="images/s5.svg"></div>
+        <div class="text">YoutubeMusic</div>
+    </div>
+    <div class="s" >
+        <div><img class ="sicons"src="images/s6.svg"></div>
+        <div class="text">Library</div>
+    </div>
+</div>
+
+
+<div class="videos">
+<div class="video">
+   
+    <div class="tnrow"><img class="image" src="images/Lavan.jpeg">
+    <div class="time">15:00</div>
+    </div>
+    <div class="Vid-info-grid">
+    <div class="dp"><img class ="profile"src="channel/lav.jpeg"></div>
+    <div class="info">
+        <p class="first">Hotel Malligi</p>
+        <p class="second">Lavanya Chinmay vlogs</p>
+        <p class="third">9.8M &#183; 1 year ago</p>
+    </div>
+        
+       
+    </div>
+
+    
+</div>
+<div class="video">
+    <div class="tnrow"><img class="image" src="images/What-episode-does-naruto-fight-pain-1.png.webp">
+    <div class="time">14:23</div>
+    </div>
+    <div class="Vid-info-grid">
+    <div class="dp"><img class="profile" src="channel/nikh.jpeg"></div>
+
+    <div class="info"><p class="first">Naruto Vs Pain</p>
+        <p class="second">Shinobi</p>
+        <p class="third">15.6M &#183; 1 month ago</p></div>
+    
+    </div>
+    
+</div>
+
+<div class="video">
+    <div class="tnrow"><img class="image" src="images/WhatsApp Image 2022-07-25 at 9.39.31 AM.jpeg">
+    <div class="time">12:26</div></div>
+    <div class="Vid-info-grid">
+        <div class="dp"><img class="profile" src="channel/WhatsApp Image 2022-07-25 at 9.42.25 AM.jpeg"></div>
+        <div class="info">
+    <p class="first">Stone Throwing Tutorial</p>
+    <p class="second">Yash Tutorials</p>
+    <p class="third">7.9M &#183; 10 days ago</p>
+        </div>
+    
+    </div>
+    
+</div>
+</div>
+
+
+
+
+
+<div class="videos">
+    <div class="video">
+       
+        <div class="tnrow"><img class="image" src="images/JEF_028564_sm.jpg">
+        <div class="time">11:47</div></div>
+        <div class="Vid-info-grid">
+        <div class="dp"><img class ="profile"src="channel/saketh.jpeg"></div>
+        <div class="info">
+            <p class="first">Set Your Heart Ablaze</p>
+            <p class="second">Saketh Rengoku</p>
+            <p class="third">6.2M &#183; 11 months ago</p>
+        </div>
+            
+           
+        </div>
+    
+        
+    </div>
+    <div class="video">
+        <div class="tnrow"><img class="image" src="images/Deku.webp">
+        <div class="time">25:00</div></div>
+        <div class="Vid-info-grid">
+        <div class="dp"><img class="profile" src="channel/sai.jpeg"></div>
+    
+        <div class="info"><p class="first">Deku vs Overhaul</p>
+            <p class="second">Saixsakura</p>
+            <p class="third">9.1M &#183; 8 month ago</p></div>
+        
+        </div>
+        
+    </div>
+    
+    <div class="video">
+        <div class="tnrow"><img class="image" src="images/mahesh.jpeg">
+        <div class="time">17:10</div></div>
+        <div class="Vid-info-grid">
+            <div class="dp"><img class="profile" src="channel/Mahesh anna.jpeg"></div>
+            <div class="info">
+        <p class="first">Hampi Temple</p>
+        <p class="second">Mahesh eliminates</p>
+        <p class="third">5.9M &#183; 10 months ago</p>
+            </div>
+        
+        </div>
+        
+
+
+
+    </div>
+    </div>
+    <div class="videos">
+        <div class="video">
+           
+            <div class="tnrow"><img class="image" src="images/Screenshot 2022-07-25 141153.png">
+            <div class="time">10:01</div></div>
+            <div class="Vid-info-grid">
+            <div class="dp"><img class ="profile"src="channel/akhil.jpeg"></div>
+            <div class="info">
+                <p class="first">KGF.....But the budget is low</p>
+                <p class="second">Choky Bhai</p>
+                <p class="third">7.6M &#183; 3 months ago</p>
+            </div>
+                
+               
+            </div>
+        
+            
+        </div>
+        <div class="video">
+            <div class="tnrow"><img class="image" src="images/maxresdefault (1).jpg">
+            <div class="time">15:57</div></div>
+            <div class="Vid-info-grid">
+            <div class="dp"><img class="profile" src="channel/kum.jpeg"></div>
+        
+            <div class="info"><p class="first">Eren Yeager HairStyle Breakdown</p>
+                <p class="second">Anime HairStyles</p>
+                <p class="third">3.9M &#183; 4 month ago</p></div>
+            
+            </div>
+            
+        </div>
+        
+        <div class="video">
+            <div class="tnrow"><img class="image" src="images/maxresdefault.jpg">
+            <div class="time">35:00</div></div>
+            <div class="Vid-info-grid">
+                <div class="dp"><img class="profile" src="channel/aka.jpeg"></div>
+                <div class="info">
+            <p class="first">Naruto vs Sasuke</p>
+            <p class="second">Ak Raj</p>
+            <p class="third">16.5M &#183; 25 days ago</p>
+                </div>
+            
+            </div>
+            
+        </div>
+        </div>
+</body>
+
+
+</html>
